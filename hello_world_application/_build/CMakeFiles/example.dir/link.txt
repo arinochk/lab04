@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.4 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/example.dir/hello_world.cpp.o -o example  formatter_lib/libformatter_ex_lib.a formatter_lib/fomatter_lib/libformatter_lib.a 

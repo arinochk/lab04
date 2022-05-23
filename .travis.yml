@@ -1,5 +1,24 @@
-language: cpp
-script:
-- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-- cmake --build _build
-- cmake --build _build --target install
+name: test_actions
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: Run cmake --version
+        shell: bash
+        run: |
+          VERSION=`cmake --version`
+          echo $VERSION
+      - name: build
+        shell: bash
+        run: |
+          - cmake -Hformatter_lib/ -Bformatter_lib/_build
+          - cmake -Hformatter_ex_lib/ -Bformatter_ex_lib/_build
+          - cmake -Hhello_world_application -Bhello_world_application/_build
+          - cmake -Hsolver_lib -Bsolver_lib/_build
+          - cmake -Hsolver_application -Bsolver_application/_build

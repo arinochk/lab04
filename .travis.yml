@@ -17,8 +17,8 @@ jobs:
       - name: build
         shell: bash
         run: |
-          - cmake -Hformatter_lib/ -Bformatter_lib/_build
-          - cmake -Hformatter_ex_lib/ -Bformatter_ex_lib/_build
-          - cmake -Hhello_world_application -Bhello_world_application/_build
-          - cmake -Hsolver_lib -Bsolver_lib/_build
-          - cmake -Hsolver_application -Bsolver_application/_build
+           cmake -Hformatter_lib/ -Bformatter_lib/_build
+           cmake -Hformatter_ex_lib/ -Bformatter_ex_lib/_build
+           cmake -Hhello_world_application -Bhello_world_application/_build
+           cmake -Hsolver_lib -Bsolver_lib/_build
+           cmake -Hsolver_application -Bsolver_application/_build

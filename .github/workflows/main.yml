@@ -1,6 +1,7 @@
 name: CI
 on: [ push ]
 
+
 jobs:
   build_hello_world_application:
     runs-on: ubuntu-latest
